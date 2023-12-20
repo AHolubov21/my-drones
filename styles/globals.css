@@ -1,0 +1,160 @@
+/* styles/global.css */
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #17263c; 
+  color: #c07a61; 
+}
+
+a {
+  color: #c07a61; 
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.sidebar, .sidebar-right {
+  width: 300px;
+  background-color: #17263c; 
+  padding: 20px;
+  overflow-y: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  position: relative;
+  margin: 10px;
+}
+
+.sidebar-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  border: none;
+  background-color: #c07a51; /* Updated color */
+  color: white;
+  border-radius: 50%; /* Make it round */
+  cursor: pointer;
+  width: 30px; /* Fixed width */
+  height: 30px; /* Fixed height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-container {
+  flex-grow: 1;
+  height: 100vh;
+}
+
+.drone-list-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #242f3e; 
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.drone-list-item:hover {
+  background-color: #e2e2e2; 
+}
+
+.drone-icon {
+  width: 25px;
+  margin-right: 10px;
+}
+
+.drone-name {
+  font-size: 16px;
+  color: #c07a61; 
+}
+
+.search-bar {
+  width: calc(100% - 40px);
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  display: block;
+  background-color: #ffffff; 
+  color: #242f3e; 
+}
+
+.detail-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #eef;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.detail-title {
+  font-weight: bold;
+}
+
+.detail-content {
+  margin-top: 5px;
+}
+
+.button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  background-color: #2f3948; /* Darker shade for the button */
+  color: #c07a61; /* Accent color for text */
+  border: 1px solid #c07a61; /* Accent border */
+}
+
+.button:hover {
+  background-color: #3a4759; /* Slightly lighter shade for hover state */
+}
+
+.battery-indicator {
+  height: 20px;
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.battery-level {
+  height: 100%;
+  background-color: green; 
+  border-radius: 5px;
+  width: 0%; 
+}
+
+.battery-level.low {
+  background-color: red; 
+}
+
+.dotted-line {
+  stroke-dasharray: 10, 5; /* Создает пунктирный эффект */
+  stroke-width: 2; /* Толщина линии */
+  stroke: #ffffff; /* Цвет линии */
+}
